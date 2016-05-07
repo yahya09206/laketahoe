@@ -1,0 +1,277 @@
+/*Web Fonts -------------*/
+@font-face {
+  font-family: 'Abolition Regular';
+}
+
+
+/*Base Styles -------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Abolition' Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 5.625rem; /* 90/16 */
+  color: red;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 1px 1px rgba(0,0,0,.8);
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 3.3125em;
+  font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: 0 0 .5em;
+
+}
+
+h3 {
+  font-size: 1.25em;
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+ul,
+ol{
+  margin: 30px 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
+/* Main Styles -------------*/
+
+.main-header {
+  padding-top: 170px;
+  height: 850px;
+    /* ascending order of background properties of what you want it to do */
+  background: linear-gradient(#ffa949, transparent 90%),
+              linear-gradient(0deg, #fff, transparent ),
+              #ffa949 url('http://2.bp.blogspot.com/_2IU2Nt4rD1k/S7HMIQcdfOI/AAAAAAAABQ4/z08SEhJ_D8o/s1600/mountain.jpg') no-repeat center;
+
+  background-size: cover;
+
+
+  /* % dictate where the colors start and end
+  background-image: radial-gradient(circle at top right,#ffa949 0%, firebrick 50%, dodgerblue 100%);*/
+
+}
+
+.title {
+  color: red;
+  font-size: 1.625rem; /* 26/16*/
+  letter-spacing: .050em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+  padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: solid 10px #ffa949;
+  text-align: center;
+}
+
+.t-border { /* targets each element thats wants a border top */
+  border-top: 2px solid lightgrey;
+}
+
+.primary-content,
+.secondary-content {
+  width: 75%;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+.wildlife {
+  color: white;
+  text-align: left;
+  padding: 18% 24%;
+  border-top: 10px solid #ffa949;
+  margin: 105px 0 60px;
+  background: url('http://www.gambassa.com/GambassaFiles/Images/images/jrmoore2/grizzly_bear_V1.jpg') no-repeat center / cover;
+  box-shadow: inset 0 0 50px 10px rgba(0,0,0,1);
+  border-radius: 10px;
+}
+
+.arrow {
+  width: 50px;
+  margin-top: 150px;
+}
+
+/*Floated Columns -------------*/
+
+.resorts,
+.tips {
+  width: 46.5%;
+}
+
+.tips {
+  float: right;
+}
+
+.resorts {
+  float: left;
+}
+
+/*Float Clearfix -------------*/
+
+.group:after { /* clears anything on page auto */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*Psuedo Classes for link behavior -------------*/
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+a:focus {
+  color: white;
+  background-color: orange;
+}
+
+
+/*Media Queries Specifies which object type-------------*/
+
+/*
+@media (max-width: 960px) {
+  body {
+    background: royalblue;
+  }
+
+} */
+
+@media (max-width: 1024px) {
+  .primary-content,
+  .secondary-content {
+    width: 90%;
+  }
+  .wildlife {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+}
+
+/* prevents divs from being too cluttered */
+@media (max-width: 768px) {
+  .primary-content,
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+
+  }
+
+  .main-header {
+    max-height: 380px;
+    padding: 50px 25px 0;
+  }
+
+  .title {
+    font-size: 1.3em;
+    border: none;
+  }
+
+  h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .resorts,
+  .tips {
+    float: none;
+    width: 100%;
+  }
+
+  .main-footer {
+    padding: 20px 0;
+  }
+}
+
+
+
+
+
+
